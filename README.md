@@ -1,0 +1,2 @@
+# JazzySlideKit
+JazzySlideKit for iOS
