@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D7DC600720EBF6AC00328B0D"
-               BuildableName = "libJazzySlideKit.a"
+               BlueprintIdentifier = "D7DC604820EC2E9400328B0D"
+               BuildableName = "JazzySlideKit.framework"
                BlueprintName = "JazzySlideKit"
                ReferencedContainer = "container:JazzySlideKit.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D7DC600720EBF6AC00328B0D"
-            BuildableName = "libJazzySlideKit.a"
+            BlueprintIdentifier = "D7DC604820EC2E9400328B0D"
+            BuildableName = "JazzySlideKit.framework"
             BlueprintName = "JazzySlideKit"
             ReferencedContainer = "container:JazzySlideKit.xcodeproj">
          </BuildableReference>
@@ -63,8 +63,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D7DC600720EBF6AC00328B0D"
-            BuildableName = "libJazzySlideKit.a"
+            BlueprintIdentifier = "D7DC604820EC2E9400328B0D"
+            BuildableName = "JazzySlideKit.framework"
             BlueprintName = "JazzySlideKit"
             ReferencedContainer = "container:JazzySlideKit.xcodeproj">
          </BuildableReference>

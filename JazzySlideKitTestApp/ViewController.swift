@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import JazzySlideKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if let navigationController = navigationController as? JazzySlideNavigationController {
+            navigationController.pushTransition.backgroundColor = .white
+            navigationController.popTransition.backgroundColor = .white
+        }
     }
 
     override func didReceiveMemoryWarning() {

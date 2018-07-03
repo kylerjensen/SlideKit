@@ -28,9 +28,15 @@ class JazzySlideKitUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testSimpleNavigation() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+        app.navigationBars["Page 1"].buttons["Next"].tap()
+        app.navigationBars["Page 2"].buttons["Next"].tap()
+        app.navigationBars["Page 3"].buttons["Back"].tap()
+        
     }
     
 }

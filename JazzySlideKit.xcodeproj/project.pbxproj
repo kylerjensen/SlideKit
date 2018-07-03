@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D7DC600C20EBF6AC00328B0D /* JazzySlideKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC600B20EBF6AC00328B0D /* JazzySlideKit.swift */; };
 		D7DC601B20EC0BAF00328B0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC601A20EC0BAF00328B0D /* AppDelegate.swift */; };
 		D7DC601D20EC0BAF00328B0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC601C20EC0BAF00328B0D /* ViewController.swift */; };
 		D7DC602020EC0BAF00328B0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DC601E20EC0BAF00328B0D /* Main.storyboard */; };
 		D7DC602220EC0BB100328B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DC602120EC0BB100328B0D /* Assets.xcassets */; };
 		D7DC602520EC0BB100328B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DC602320EC0BB100328B0D /* LaunchScreen.storyboard */; };
 		D7DC603120EC0BCA00328B0D /* JazzySlideKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC603020EC0BCA00328B0D /* JazzySlideKitUITests.swift */; };
+		D7DC604D20EC2E9400328B0D /* JazzySlideKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DC604B20EC2E9400328B0D /* JazzySlideKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7DC605020EC2E9400328B0D /* JazzySlideKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DC604920EC2E9400328B0D /* JazzySlideKit.framework */; };
+		D7DC605120EC2E9400328B0D /* JazzySlideKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7DC604920EC2E9400328B0D /* JazzySlideKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D7DC605B20EC2EBB00328B0D /* JazzySlideTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC605620EC2EBB00328B0D /* JazzySlideTransition.swift */; };
+		D7DC605C20EC2EBB00328B0D /* JazzySlideNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC605720EC2EBB00328B0D /* JazzySlideNavigationController.swift */; };
+		D7DC605D20EC2EBB00328B0D /* JazzySlidePopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC605820EC2EBB00328B0D /* JazzySlidePopTransition.swift */; };
+		D7DC605E20EC2EBB00328B0D /* JazzySlidePushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC605920EC2EBB00328B0D /* JazzySlidePushTransition.swift */; };
+		D7DC605F20EC2EBB00328B0D /* JazzySlideNavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC605A20EC2EBB00328B0D /* JazzySlideNavigationControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,23 +31,30 @@
 			remoteGlobalIDString = D7DC601720EC0BAF00328B0D;
 			remoteInfo = JazzySlideKitTestApp;
 		};
+		D7DC604E20EC2E9400328B0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7DC600020EBF6AC00328B0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7DC604820EC2E9400328B0D;
+			remoteInfo = JazzySlideKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D7DC600620EBF6AC00328B0D /* CopyFiles */ = {
+		D7DC605520EC2E9400328B0D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
+			dstPath = "";
+			dstSubfolderSpec = 10;
 			files = (
+				D7DC605120EC2E9400328B0D /* JazzySlideKit.framework in Embed Frameworks */,
 			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D7DC600820EBF6AC00328B0D /* libJazzySlideKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJazzySlideKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7DC600B20EBF6AC00328B0D /* JazzySlideKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JazzySlideKit.swift; sourceTree = "<group>"; };
 		D7DC601820EC0BAF00328B0D /* JazzySlideKitTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazzySlideKitTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DC601A20EC0BAF00328B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7DC601C20EC0BAF00328B0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,24 +65,33 @@
 		D7DC602E20EC0BCA00328B0D /* JazzySlideKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JazzySlideKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DC603020EC0BCA00328B0D /* JazzySlideKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JazzySlideKitUITests.swift; sourceTree = "<group>"; };
 		D7DC603220EC0BCA00328B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7DC604920EC2E9400328B0D /* JazzySlideKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JazzySlideKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7DC604B20EC2E9400328B0D /* JazzySlideKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JazzySlideKit.h; sourceTree = "<group>"; };
+		D7DC604C20EC2E9400328B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7DC605620EC2EBB00328B0D /* JazzySlideTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JazzySlideTransition.swift; sourceTree = "<group>"; };
+		D7DC605720EC2EBB00328B0D /* JazzySlideNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JazzySlideNavigationController.swift; sourceTree = "<group>"; };
+		D7DC605820EC2EBB00328B0D /* JazzySlidePopTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JazzySlidePopTransition.swift; sourceTree = "<group>"; };
+		D7DC605920EC2EBB00328B0D /* JazzySlidePushTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JazzySlidePushTransition.swift; sourceTree = "<group>"; };
+		D7DC605A20EC2EBB00328B0D /* JazzySlideNavigationControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JazzySlideNavigationControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D7DC600520EBF6AC00328B0D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D7DC601520EC0BAF00328B0D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7DC605020EC2E9400328B0D /* JazzySlideKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D7DC602B20EC0BCA00328B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7DC604520EC2E9400328B0D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,29 +104,22 @@
 		D7DC5FFF20EBF6AC00328B0D = {
 			isa = PBXGroup;
 			children = (
-				D7DC600A20EBF6AC00328B0D /* JazzySlideKit */,
+				D7DC604A20EC2E9400328B0D /* JazzySlideKit */,
 				D7DC602F20EC0BCA00328B0D /* JazzySlideKitUITests */,
 				D7DC601920EC0BAF00328B0D /* JazzySlideKitTestApp */,
 				D7DC600920EBF6AC00328B0D /* Products */,
+				D7DC604220EC2C3200328B0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		D7DC600920EBF6AC00328B0D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D7DC600820EBF6AC00328B0D /* libJazzySlideKit.a */,
 				D7DC601820EC0BAF00328B0D /* JazzySlideKitTestApp.app */,
 				D7DC602E20EC0BCA00328B0D /* JazzySlideKitUITests.xctest */,
+				D7DC604920EC2E9400328B0D /* JazzySlideKit.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D7DC600A20EBF6AC00328B0D /* JazzySlideKit */ = {
-			isa = PBXGroup;
-			children = (
-				D7DC600B20EBF6AC00328B0D /* JazzySlideKit.swift */,
-			);
-			path = JazzySlideKit;
 			sourceTree = "<group>";
 		};
 		D7DC601920EC0BAF00328B0D /* JazzySlideKitTestApp */ = {
@@ -128,26 +144,41 @@
 			path = JazzySlideKitUITests;
 			sourceTree = "<group>";
 		};
+		D7DC604220EC2C3200328B0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7DC604A20EC2E9400328B0D /* JazzySlideKit */ = {
+			isa = PBXGroup;
+			children = (
+				D7DC605720EC2EBB00328B0D /* JazzySlideNavigationController.swift */,
+				D7DC605A20EC2EBB00328B0D /* JazzySlideNavigationControllerDelegate.swift */,
+				D7DC605820EC2EBB00328B0D /* JazzySlidePopTransition.swift */,
+				D7DC605920EC2EBB00328B0D /* JazzySlidePushTransition.swift */,
+				D7DC605620EC2EBB00328B0D /* JazzySlideTransition.swift */,
+				D7DC604B20EC2E9400328B0D /* JazzySlideKit.h */,
+				D7DC604C20EC2E9400328B0D /* Info.plist */,
+			);
+			path = JazzySlideKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
-/* Begin PBXNativeTarget section */
-		D7DC600720EBF6AC00328B0D /* JazzySlideKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D7DC600F20EBF6AC00328B0D /* Build configuration list for PBXNativeTarget "JazzySlideKit" */;
-			buildPhases = (
-				D7DC600420EBF6AC00328B0D /* Sources */,
-				D7DC600520EBF6AC00328B0D /* Frameworks */,
-				D7DC600620EBF6AC00328B0D /* CopyFiles */,
+/* Begin PBXHeadersBuildPhase section */
+		D7DC604620EC2E9400328B0D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DC604D20EC2E9400328B0D /* JazzySlideKit.h in Headers */,
 			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = JazzySlideKit;
-			productName = JazzySlideKit;
-			productReference = D7DC600820EBF6AC00328B0D /* libJazzySlideKit.a */;
-			productType = "com.apple.product-type.library.static";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
 		D7DC601720EC0BAF00328B0D /* JazzySlideKitTestApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7DC602920EC0BB100328B0D /* Build configuration list for PBXNativeTarget "JazzySlideKitTestApp" */;
@@ -155,10 +186,12 @@
 				D7DC601420EC0BAF00328B0D /* Sources */,
 				D7DC601520EC0BAF00328B0D /* Frameworks */,
 				D7DC601620EC0BAF00328B0D /* Resources */,
+				D7DC605520EC2E9400328B0D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D7DC604F20EC2E9400328B0D /* PBXTargetDependency */,
 			);
 			name = JazzySlideKitTestApp;
 			productName = JazzySlideKitTestApp;
@@ -183,6 +216,24 @@
 			productReference = D7DC602E20EC0BCA00328B0D /* JazzySlideKitUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D7DC604820EC2E9400328B0D /* JazzySlideKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7DC605220EC2E9400328B0D /* Build configuration list for PBXNativeTarget "JazzySlideKit" */;
+			buildPhases = (
+				D7DC604420EC2E9400328B0D /* Sources */,
+				D7DC604520EC2E9400328B0D /* Frameworks */,
+				D7DC604620EC2E9400328B0D /* Headers */,
+				D7DC604720EC2E9400328B0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JazzySlideKit;
+			productName = JazzySlideKit;
+			productReference = D7DC604920EC2E9400328B0D /* JazzySlideKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -194,15 +245,16 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Kyler Jensen";
 				TargetAttributes = {
-					D7DC600720EBF6AC00328B0D = {
-						CreatedOnToolsVersion = 9.4.1;
-					};
 					D7DC601720EC0BAF00328B0D = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 					D7DC602D20EC0BCA00328B0D = {
 						CreatedOnToolsVersion = 9.4.1;
 						TestTargetID = D7DC601720EC0BAF00328B0D;
+					};
+					D7DC604820EC2E9400328B0D = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -219,7 +271,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D7DC600720EBF6AC00328B0D /* JazzySlideKit */,
+				D7DC604820EC2E9400328B0D /* JazzySlideKit */,
 				D7DC601720EC0BAF00328B0D /* JazzySlideKitTestApp */,
 				D7DC602D20EC0BCA00328B0D /* JazzySlideKitUITests */,
 			);
@@ -244,17 +296,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		D7DC600420EBF6AC00328B0D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+		D7DC604720EC2E9400328B0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7DC600C20EBF6AC00328B0D /* JazzySlideKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
 		D7DC601420EC0BAF00328B0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,6 +323,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7DC604420EC2E9400328B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DC605C20EC2EBB00328B0D /* JazzySlideNavigationController.swift in Sources */,
+				D7DC605E20EC2EBB00328B0D /* JazzySlidePushTransition.swift in Sources */,
+				D7DC605B20EC2EBB00328B0D /* JazzySlideTransition.swift in Sources */,
+				D7DC605F20EC2EBB00328B0D /* JazzySlideNavigationControllerDelegate.swift in Sources */,
+				D7DC605D20EC2EBB00328B0D /* JazzySlidePopTransition.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -279,6 +342,11 @@
 			isa = PBXTargetDependency;
 			target = D7DC601720EC0BAF00328B0D /* JazzySlideKitTestApp */;
 			targetProxy = D7DC603320EC0BCA00328B0D /* PBXContainerItemProxy */;
+		};
+		D7DC604F20EC2E9400328B0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7DC604820EC2E9400328B0D /* JazzySlideKit */;
+			targetProxy = D7DC604E20EC2E9400328B0D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -416,33 +484,10 @@
 			};
 			name = Release;
 		};
-		D7DC601020EBF6AC00328B0D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D7DC601120EBF6AC00328B0D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		D7DC602720EC0BB100328B0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -461,6 +506,7 @@
 		D7DC602820EC0BB100328B0D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -514,6 +560,65 @@
 			};
 			name = Release;
 		};
+		D7DC605320EC2E9400328B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = JazzySlideKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.JazzyComponents.JazzySlideKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D7DC605420EC2E9400328B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = JazzySlideKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.JazzyComponents.JazzySlideKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -522,15 +627,6 @@
 			buildConfigurations = (
 				D7DC600D20EBF6AC00328B0D /* Debug */,
 				D7DC600E20EBF6AC00328B0D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D7DC600F20EBF6AC00328B0D /* Build configuration list for PBXNativeTarget "JazzySlideKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D7DC601020EBF6AC00328B0D /* Debug */,
-				D7DC601120EBF6AC00328B0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -549,6 +645,15 @@
 			buildConfigurations = (
 				D7DC603620EC0BCA00328B0D /* Debug */,
 				D7DC603720EC0BCA00328B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7DC605220EC2E9400328B0D /* Build configuration list for PBXNativeTarget "JazzySlideKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7DC605320EC2E9400328B0D /* Debug */,
+				D7DC605420EC2E9400328B0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
