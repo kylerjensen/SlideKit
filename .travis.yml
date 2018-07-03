@@ -6,10 +6,10 @@ env:
   - DESTINATION="platform=iOS Simulator,name=iPhone SE,OS=11.4"
   - DESTINATION="platform=iOS Simulator,name=iPhone 8 Plus,OS=11.4"
   - DESTINATION="platform=iOS Simulator,name=iPad Pro (10.5-inch),OS=11.4"
-  - DESTINATION="platform=iOS Simulator,name=iPhone X,OS=10.3.2"
-  - DESTINATION="platform=iOS Simulator,name=iPhone SE,OS=10.3.2"
-  - DESTINATION="platform=iOS Simulator,name=iPhone 8 Plus,OS=10.3.2"
-  - DESTINATION="platform=iOS Simulator,name=iPad Pro (10.5-inch),OS=10.3.2"
+  # - DESTINATION="platform=iOS Simulator,name=iPhone X,OS=10.3.2"
+  # - DESTINATION="platform=iOS Simulator,name=iPhone SE,OS=10.3.2"
+  # - DESTINATION="platform=iOS Simulator,name=iPhone 8 Plus,OS=10.3.2"
+  # - DESTINATION="platform=iOS Simulator,name=iPad Pro (10.5-inch),OS=10.3.2"
 
 before_deploy:
   - npm i -g podspec-bump
