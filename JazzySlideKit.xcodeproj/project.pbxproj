@@ -8,7 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		D7DC600C20EBF6AC00328B0D /* JazzySlideKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC600B20EBF6AC00328B0D /* JazzySlideKit.swift */; };
+		D7DC601B20EC0BAF00328B0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC601A20EC0BAF00328B0D /* AppDelegate.swift */; };
+		D7DC601D20EC0BAF00328B0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC601C20EC0BAF00328B0D /* ViewController.swift */; };
+		D7DC602020EC0BAF00328B0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DC601E20EC0BAF00328B0D /* Main.storyboard */; };
+		D7DC602220EC0BB100328B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DC602120EC0BB100328B0D /* Assets.xcassets */; };
+		D7DC602520EC0BB100328B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DC602320EC0BB100328B0D /* LaunchScreen.storyboard */; };
+		D7DC603120EC0BCA00328B0D /* JazzySlideKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC603020EC0BCA00328B0D /* JazzySlideKitUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D7DC603320EC0BCA00328B0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7DC600020EBF6AC00328B0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7DC601720EC0BAF00328B0D;
+			remoteInfo = JazzySlideKitTestApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		D7DC600620EBF6AC00328B0D /* CopyFiles */ = {
@@ -25,10 +41,34 @@
 /* Begin PBXFileReference section */
 		D7DC600820EBF6AC00328B0D /* libJazzySlideKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJazzySlideKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DC600B20EBF6AC00328B0D /* JazzySlideKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JazzySlideKit.swift; sourceTree = "<group>"; };
+		D7DC601820EC0BAF00328B0D /* JazzySlideKitTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazzySlideKitTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7DC601A20EC0BAF00328B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7DC601C20EC0BAF00328B0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7DC601F20EC0BAF00328B0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7DC602120EC0BB100328B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7DC602420EC0BB100328B0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D7DC602620EC0BB100328B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7DC602E20EC0BCA00328B0D /* JazzySlideKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JazzySlideKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7DC603020EC0BCA00328B0D /* JazzySlideKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JazzySlideKitUITests.swift; sourceTree = "<group>"; };
+		D7DC603220EC0BCA00328B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D7DC600520EBF6AC00328B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7DC601520EC0BAF00328B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7DC602B20EC0BCA00328B0D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				D7DC600A20EBF6AC00328B0D /* JazzySlideKit */,
+				D7DC602F20EC0BCA00328B0D /* JazzySlideKitUITests */,
+				D7DC601920EC0BAF00328B0D /* JazzySlideKitTestApp */,
 				D7DC600920EBF6AC00328B0D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				D7DC600820EBF6AC00328B0D /* libJazzySlideKit.a */,
+				D7DC601820EC0BAF00328B0D /* JazzySlideKitTestApp.app */,
+				D7DC602E20EC0BCA00328B0D /* JazzySlideKitUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +104,28 @@
 				D7DC600B20EBF6AC00328B0D /* JazzySlideKit.swift */,
 			);
 			path = JazzySlideKit;
+			sourceTree = "<group>";
+		};
+		D7DC601920EC0BAF00328B0D /* JazzySlideKitTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				D7DC601A20EC0BAF00328B0D /* AppDelegate.swift */,
+				D7DC601C20EC0BAF00328B0D /* ViewController.swift */,
+				D7DC601E20EC0BAF00328B0D /* Main.storyboard */,
+				D7DC602120EC0BB100328B0D /* Assets.xcassets */,
+				D7DC602320EC0BB100328B0D /* LaunchScreen.storyboard */,
+				D7DC602620EC0BB100328B0D /* Info.plist */,
+			);
+			path = JazzySlideKitTestApp;
+			sourceTree = "<group>";
+		};
+		D7DC602F20EC0BCA00328B0D /* JazzySlideKitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D7DC603020EC0BCA00328B0D /* JazzySlideKitUITests.swift */,
+				D7DC603220EC0BCA00328B0D /* Info.plist */,
+			);
+			path = JazzySlideKitUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +148,41 @@
 			productReference = D7DC600820EBF6AC00328B0D /* libJazzySlideKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		D7DC601720EC0BAF00328B0D /* JazzySlideKitTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7DC602920EC0BB100328B0D /* Build configuration list for PBXNativeTarget "JazzySlideKitTestApp" */;
+			buildPhases = (
+				D7DC601420EC0BAF00328B0D /* Sources */,
+				D7DC601520EC0BAF00328B0D /* Frameworks */,
+				D7DC601620EC0BAF00328B0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JazzySlideKitTestApp;
+			productName = JazzySlideKitTestApp;
+			productReference = D7DC601820EC0BAF00328B0D /* JazzySlideKitTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D7DC602D20EC0BCA00328B0D /* JazzySlideKitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7DC603520EC0BCA00328B0D /* Build configuration list for PBXNativeTarget "JazzySlideKitUITests" */;
+			buildPhases = (
+				D7DC602A20EC0BCA00328B0D /* Sources */,
+				D7DC602B20EC0BCA00328B0D /* Frameworks */,
+				D7DC602C20EC0BCA00328B0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7DC603420EC0BCA00328B0D /* PBXTargetDependency */,
+			);
+			name = JazzySlideKitUITests;
+			productName = JazzySlideKitUITests;
+			productReference = D7DC602E20EC0BCA00328B0D /* JazzySlideKitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +197,13 @@
 					D7DC600720EBF6AC00328B0D = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
+					D7DC601720EC0BAF00328B0D = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					D7DC602D20EC0BCA00328B0D = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = D7DC601720EC0BAF00328B0D;
+					};
 				};
 			};
 			buildConfigurationList = D7DC600320EBF6AC00328B0D /* Build configuration list for PBXProject "JazzySlideKit" */;
@@ -104,6 +212,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = D7DC5FFF20EBF6AC00328B0D;
 			productRefGroup = D7DC600920EBF6AC00328B0D /* Products */;
@@ -111,9 +220,31 @@
 			projectRoot = "";
 			targets = (
 				D7DC600720EBF6AC00328B0D /* JazzySlideKit */,
+				D7DC601720EC0BAF00328B0D /* JazzySlideKitTestApp */,
+				D7DC602D20EC0BCA00328B0D /* JazzySlideKitUITests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7DC601620EC0BAF00328B0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DC602520EC0BB100328B0D /* LaunchScreen.storyboard in Resources */,
+				D7DC602220EC0BB100328B0D /* Assets.xcassets in Resources */,
+				D7DC602020EC0BAF00328B0D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7DC602C20EC0BCA00328B0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D7DC600420EBF6AC00328B0D /* Sources */ = {
@@ -124,7 +255,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7DC601420EC0BAF00328B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DC601D20EC0BAF00328B0D /* ViewController.swift in Sources */,
+				D7DC601B20EC0BAF00328B0D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7DC602A20EC0BCA00328B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DC603120EC0BCA00328B0D /* JazzySlideKitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D7DC603420EC0BCA00328B0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7DC601720EC0BAF00328B0D /* JazzySlideKitTestApp */;
+			targetProxy = D7DC603320EC0BCA00328B0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D7DC601E20EC0BAF00328B0D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7DC601F20EC0BAF00328B0D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D7DC602320EC0BB100328B0D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7DC602420EC0BB100328B0D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D7DC600D20EBF6AC00328B0D /* Debug */ = {
@@ -265,6 +440,80 @@
 			};
 			name = Release;
 		};
+		D7DC602720EC0BB100328B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = JazzySlideKitTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.JazzyComponents.JazzySlideKitTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D7DC602820EC0BB100328B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = JazzySlideKitTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.JazzyComponents.JazzySlideKitTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D7DC603620EC0BCA00328B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = JazzySlideKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.JazzyComponents.JazzySlideKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JazzySlideKitTestApp;
+			};
+			name = Debug;
+		};
+		D7DC603720EC0BCA00328B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = JazzySlideKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.JazzyComponents.JazzySlideKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JazzySlideKitTestApp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -282,6 +531,24 @@
 			buildConfigurations = (
 				D7DC601020EBF6AC00328B0D /* Debug */,
 				D7DC601120EBF6AC00328B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7DC602920EC0BB100328B0D /* Build configuration list for PBXNativeTarget "JazzySlideKitTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7DC602720EC0BB100328B0D /* Debug */,
+				D7DC602820EC0BB100328B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7DC603520EC0BCA00328B0D /* Build configuration list for PBXNativeTarget "JazzySlideKitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7DC603620EC0BCA00328B0D /* Debug */,
+				D7DC603720EC0BCA00328B0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
