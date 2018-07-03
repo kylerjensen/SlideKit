@@ -1,13 +1,10 @@
 language: swift
 osx_image: xcode9.4
-xcode_workspace: JazzySlideKit.xcworkspace
-xcode_schema: JazzySlideKitTests
-
-before_install:
-  - brew install node
-  - npm i -g podspec-bump
+xcode_project: JazzySlideKit.xcodeproj
+xcode_scheme: JazzySlideKitUITests
 
 before_deploy:
+  - npm i -g podspec-bump
   - git config --local user.name "Travis CI"
   - git config --local user.eamil "travis@travis-ci.org"
 
