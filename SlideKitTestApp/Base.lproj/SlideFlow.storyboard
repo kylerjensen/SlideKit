@@ -52,7 +52,6 @@
                         <viewLayoutGuide key="safeArea" id="wp7-Mp-kFe"/>
                     </view>
                     <navigationItem key="navigationItem" title="Page 2" id="vFv-n7-yVX">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="3kg-sv-Axl"/>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="xZY-ad-t4F">
                             <connections>
                                 <segue destination="JT5-dP-rSl" kind="show" id="IEK-Kg-IJF"/>
@@ -80,14 +79,14 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCV-D3-uFS">
                                 <rect key="frame" x="0.0" y="88" width="375" height="87.666666666666686"/>
-                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque dolor, sodales non massa a, finibus viverra augue. Sed placerat sapien ac libero posuere lacinia. Cras nisi lectus, euismod vitae rhoncus in, posuere quis nulla. Mauris sodales lacus a lorem efficitur porttitor. Cras magna enim, interdum id consectetur sit amet, porta vitae metus. Aliquam porttitor finibus elit, placerat sagittis purus gravida congue. Duis id nibh et nisi vulputate rhoncus ut ac dolor. Etiam consequat urna vel est ullamcorper ultricies eu quis massa. Ut convallis at nulla scelerisque fermentum. Curabitur at urna tempus, vestibulum diam sed, pharetra lacus. Vestibulum nec nunc tempor, consequat magna eu, consectetur risus. Ut quis urna vehicula arcu interdum lobortis nec quis dolor. Maecenas lacinia justo quis dolor luctus, at vestibulum est vestibulum. Etiam ut malesuada nisl.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque dolor, sodales non massa a, finibus viverra augue. Sed placerat sapien ac libero posuere lacinia. Cras nisi lectus, euismod vitae rhoncus in, posuere quis nulla. Mauris sodales lacus a lorem efficitur porttitor. Cras magna enim, interdum id consectetur sit amet, porta vitae metus. Aliquam porttitor finibus elit, placerat sagittis purus gravida congue. Duis id nibh et nisi vulputate rhoncus ut ac dolor. Etiam consequat urna vel est ullamcorper ultricies eu quis massa. Ut convallis at nulla scelerisque fermentum. Curabitur at urna tempus, vestibulum diam sed, pharetra lacus. Vestibulum nec nunc tempor, consequat magna eu, consectetur risus. Ut quis urna vehicula arcu interdum lobortis nec quis dolor. Maecenas lacinia justo quis dolor luctus, at vestibulum est vestibulum. Etiam ut malesuada nisl.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrc-J8-SmM">
                                 <rect key="frame" x="0.0" y="690.33333333333337" width="375" height="87.666666666666629"/>
-                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque dolor, sodales non massa a, finibus viverra augue. Sed placerat sapien ac libero posuere lacinia. Cras nisi lectus, euismod vitae rhoncus in, posuere quis nulla. Mauris sodales lacus a lorem efficitur porttitor. Cras magna enim, interdum id consectetur sit amet, porta vitae metus. Aliquam porttitor finibus elit, placerat sagittis purus gravida congue. Duis id nibh et nisi vulputate rhoncus ut ac dolor. Etiam consequat urna vel est ullamcorper ultricies eu quis massa. Ut convallis at nulla scelerisque fermentum. Curabitur at urna tempus, vestibulum diam sed, pharetra lacus. Vestibulum nec nunc tempor, consequat magna eu, consectetur risus. Ut quis urna vehicula arcu interdum lobortis nec quis dolor. Maecenas lacinia justo quis dolor luctus, at vestibulum est vestibulum. Etiam ut malesuada nisl.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque dolor, sodales non massa a, finibus viverra augue. Sed placerat sapien ac libero posuere lacinia. Cras nisi lectus, euismod vitae rhoncus in, posuere quis nulla. Mauris sodales lacus a lorem efficitur porttitor. Cras magna enim, interdum id consectetur sit amet, porta vitae metus. Aliquam porttitor finibus elit, placerat sagittis purus gravida congue. Duis id nibh et nisi vulputate rhoncus ut ac dolor. Etiam consequat urna vel est ullamcorper ultricies eu quis massa. Ut convallis at nulla scelerisque fermentum. Curabitur at urna tempus, vestibulum diam sed, pharetra lacus. Vestibulum nec nunc tempor, consequat magna eu, consectetur risus. Ut quis urna vehicula arcu interdum lobortis nec quis dolor. Maecenas lacinia justo quis dolor luctus, at vestibulum est vestibulum. Etiam ut malesuada nisl.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -115,7 +114,7 @@
         <!--Page 1-->
         <scene sceneID="O9t-YR-7tH">
             <objects>
-                <viewController id="KBJ-Ge-aCn" sceneMemberID="viewController">
+                <viewController id="KBJ-Ge-aCn" customClass="Page1ViewController" customModule="JazzySlideKitTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X5L-io-o8x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,16 +125,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yS-Og-Aph">
+                                <rect key="frame" x="171.66666666666666" y="448.66666666666669" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="AX5-Tq-PcQ" kind="show" id="mPT-Sn-pj9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8g-3L-9Yv">
+                                <rect key="frame" x="161" y="484" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="didTapDismiss:" destination="KBJ-Ge-aCn" eventType="touchUpInside" id="HtL-cT-0oU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="C8g-3L-9Yv" firstAttribute="centerX" secondItem="2yS-Og-Aph" secondAttribute="centerX" id="R0n-lX-E2S"/>
                             <constraint firstItem="dkJ-fx-xiM" firstAttribute="centerX" secondItem="574-RT-8cM" secondAttribute="centerX" id="T2T-8f-40d"/>
                             <constraint firstItem="dkJ-fx-xiM" firstAttribute="centerY" secondItem="574-RT-8cM" secondAttribute="centerY" id="ilH-gM-Ndk"/>
+                            <constraint firstItem="2yS-Og-Aph" firstAttribute="centerX" secondItem="dkJ-fx-xiM" secondAttribute="centerX" id="o4y-2o-4IQ"/>
+                            <constraint firstItem="2yS-Og-Aph" firstAttribute="top" secondItem="dkJ-fx-xiM" secondAttribute="bottom" constant="5" id="xHc-cb-1IU"/>
+                            <constraint firstItem="C8g-3L-9Yv" firstAttribute="top" secondItem="2yS-Og-Aph" secondAttribute="bottom" constant="5" id="xTF-Od-Wru"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="574-RT-8cM"/>
                     </view>
                     <navigationItem key="navigationItem" title="Page 1" id="wsZ-fX-wsD">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="Dbr-MA-zh8"/>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="AzN-DO-3bs">
                             <connections>
                                 <segue destination="AX5-Tq-PcQ" kind="show" id="XuQ-bF-Wcs"/>
@@ -148,4 +164,7 @@
             <point key="canvasLocation" x="1079.2" y="133.74384236453201"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mPT-Sn-pj9"/>
+    </inferredMetricsTieBreakers>
 </document>

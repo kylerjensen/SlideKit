@@ -1,27 +1,30 @@
 language: swift
 osx_image: xcode9.4
+cache: bundler
 
 env:
-  - DESTINATION="platform=iOS Simulator,name=iPhone X,OS=11.4"
-  - DESTINATION="platform=iOS Simulator,name=iPhone SE,OS=11.4"
-  - DESTINATION="platform=iOS Simulator,name=iPhone 8 Plus,OS=11.4"
-  - DESTINATION="platform=iOS Simulator,name=iPad Pro (10.5-inch),OS=11.4"
-  - DESTINATION="platform=iOS Simulator,name=iPhone X,OS=10.3"
-  - DESTINATION="platform=iOS Simulator,name=iPhone SE,OS=10.3"
-  - DESTINATION="platform=iOS Simulator,name=iPhone 8 Plus,OS=10.3"
-  - DESTINATION="platform=iOS Simulator,name=iPad Pro (10.5-inch),OS=10.3"
+  - OS="11.4" DEVICE="iPhone X"
+  - OS="11.4" DEVICE="iPhone 8"
+  - OS="11.4" DEVICE="iPhone 8 Plus"
+  - OS="11.4" DEVICE="iPad Pro (10.5-inch)"
+  - OS="10.3.1" DEVICE="iPhone 7"
+  - OS="10.3.1" DEVICE="iPhone 7 Plus"
+  - OS="10.3.1" DEVICE="iPad Pro (10.5-inch)"
 
-before_deploy:
-  - npm i -g podspec-bump
-  - git config --local user.name "Travis CI"
-  - git config --local user.eamil "travis@travis-ci.org"
+before_install:
+  - set -eo pipefail
 
-script:
-  - set -o pipefail && xcodebuild test -scheme JazzySlideKitUITests -destination "$DESTINATION" | xcpretty
+script: |
+  xcodebuild test \
+  -scheme JazzySlideKitSnapshotTests \
+  -destination "platform=iOS Simulator,name=$DEVICE,OS=$OS" | xcpretty -c -f `xcpretty-travis-formatter`
 
-deploy:
-  provider: script
-  script: bash scripts/deploy.sh $TRAVIS_TAG JazzySlideKit.podspec
-  on:
-    branch: master
-    tags: true
+jobs:
+  include:
+    - stage: deploy
+      script:
+        - npm i -g podspec-bump
+        - podspec-bump -w -i $TRAVIS_TAG
+        - pod trunk push 
+      if: tag =~ /[0-9]+(\.[0-9]+)*/
+      

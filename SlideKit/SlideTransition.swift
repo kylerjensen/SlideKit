@@ -1,6 +1,6 @@
 //
-//  JazzySlideTransition.swift
-//  JazzySlideKit
+//  SlideTransition.swift
+//  SlideKit
 //
 //  Created by Kyler Jensen on 7/3/18.
 //  Copyright © 2018 Kyler Jensen. All rights reserved.
@@ -10,33 +10,32 @@ import UIKit
 
 @objc
 @objcMembers
-open class JazzySlideTransition: NSObject, UIViewControllerAnimatedTransitioning {
-    
-    @objc
-    public enum Mode : Int {
-        case horizontalPush
-        case horizontalPop
-    }
-    
-    public let mode: Mode
+@available(iOS 10.0, *)
+open class SlideTransition: NSObject, UIViewControllerAnimatedTransitioning {
     
     /**
      A mask of options indicating how you want to perform the animations.
      For a list of valid constants, see UIViewAnimationOptions.
+     
+     The default value is [.curveEaseOut].
      */
-    open var animationOptions: UIViewAnimationOptions = [.curveEaseInOut]
+    open var animationOptions: UIViewAnimationOptions = [.curveEaseOut]
     
     /**
      The total duration of the animations, measured in seconds.
      If you specify a negative value or 0, the changes are made without animating them.
+     
+     The default value is 0.35.
      */
-    open var animationDuration: TimeInterval = 0.35
+    open var duration: TimeInterval = 0.35
     
     /**
      The amount of time (measured in seconds) to wait before beginning the animations.
      Specify a value of 0 to begin the animations immediately.
+     
+     The default value is 0.
      */
-    open var animationDelay: TimeInterval = 0.0
+    open var delay: TimeInterval = 0.0
     
     /**
      The damping ratio for the spring animation as it approaches its quiescent state.
@@ -47,8 +46,10 @@ open class JazzySlideTransition: NSObject, UIViewControllerAnimatedTransitioning
      When `dampingRatio` is 1, the animation will smoothly decelerate to its final model
      values without oscillating. Damping ratios less than 1 will oscillate more and more
      before coming to a complete stop.
+     
+     The default value is 1.
      */
-    open var animationSpringDampingRatio: CGFloat = 0.75
+    open var springDampingRatio: CGFloat = 1
     
     /**
      The initial spring velocity. For smooth start to the animation, match this value
@@ -64,8 +65,10 @@ open class JazzySlideTransition: NSObject, UIViewControllerAnimatedTransitioning
      So if you're changing an object's position by 200pt in this animation, and you want
      the animation to behave as if the object was moving at 100pt/s before the animation
      started, you'd pass 0.5. You'll typically want to pass 0 for the velocity.
+     
+     The default value is 0.
      */
-    open var animationSpringDampingInitialVelocity: CGFloat = 0.0
+    open var springDampingInitialVelocity: CGFloat = 0.0
     
     /**
      The background color to set for each transitions' contexts' container view.
@@ -77,16 +80,23 @@ open class JazzySlideTransition: NSObject, UIViewControllerAnimatedTransitioning
      view controller to it. The animator object is responsible for adding the view of the
      presented view controller, and the animator object or presentation controller must use
      this view as the container for all other views involved in the transition.
+     
+     The default value is `nil`.
      */
     open var backgroundColor: UIColor?
     
-    init(mode: Mode) {
-        self.mode = mode
-        super.init()
-    }
+    
     
     open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return animationDuration + animationDelay
+        return duration + delay
+    }
+    
+    open func initialTransform(for transitionContext: UIViewControllerContextTransitioning, fromView: UIView, toView: UIView) -> CGAffineTransform {
+        return .identity
+    }
+    
+    open func finalTransform(for transitionContext: UIViewControllerContextTransitioning, fromView: UIView, toView: UIView) -> CGAffineTransform {
+        return .identity
     }
     
     open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -99,31 +109,15 @@ open class JazzySlideTransition: NSObject, UIViewControllerAnimatedTransitioning
     
     private func translate(using transitionContext: UIViewControllerContextTransitioning, fromView: UIView, toView: UIView) {
         
-        var initialTranslation = CGPoint()
-        var finalTranslation = CGPoint()
+        let initialTranslation = initialTransform(for: transitionContext, fromView: fromView, toView: toView)
+        let finalTranslation = finalTransform(for: transitionContext, fromView: fromView, toView: toView)
         
-        switch mode {
-        case .horizontalPush:
-            initialTranslation.x = fromView.frame.width
-            finalTranslation.x = fromView.frame.width.negated
-        case .horizontalPop:
-            initialTranslation.x = fromView.frame.width.negated
-            finalTranslation.x = fromView.frame.width
-        }
-        
-        toView.frame = fromView.frame
-        toView.translateHorizontally(by: initialTranslation.x)
-        toView.translateVertically(by: initialTranslation.y)
-        
-        if #available(iOS 11.0, *) {
-            toView.layoutIfNeeded()
-        }
+        toView.frame = fromView.frame.applying(initialTranslation)
+        toView.layoutIfNeeded()
         
         let animations: () -> Void = {
-            toView.translateHorizontally(by: finalTranslation.x)
-            toView.translateVertically(by: finalTranslation.y)
-            fromView.translateHorizontally(by: finalTranslation.x)
-            fromView.translateVertically(by: finalTranslation.y)
+            fromView.frame = fromView.frame.applying(finalTranslation)
+            toView.frame = toView.frame.applying(finalTranslation)
             toView.layoutIfNeeded()
         }
         
@@ -131,10 +125,10 @@ open class JazzySlideTransition: NSObject, UIViewControllerAnimatedTransitioning
             transitionContext.completeTransition($0)
         }
         
-        UIView.animate(withDuration: animationDuration,
-                       delay: animationDelay,
-                       usingSpringWithDamping: animationSpringDampingRatio,
-                       initialSpringVelocity: animationSpringDampingInitialVelocity,
+        UIView.animate(withDuration: duration,
+                       delay: delay,
+                       usingSpringWithDamping: springDampingRatio,
+                       initialSpringVelocity: springDampingInitialVelocity,
                        options: animationOptions,
                        animations: animations,
                        completion: completion)
@@ -143,19 +137,7 @@ open class JazzySlideTransition: NSObject, UIViewControllerAnimatedTransitioning
     
 }
 
-private extension UIView {
-    
-    func translateHorizontally(by x: CGFloat) {
-        frame = frame.applying(CGAffineTransform(translationX: x, y: 0))
-    }
-    
-    func translateVertically(by y: CGFloat) {
-        frame = frame.applying(CGAffineTransform(translationX: 0, y: y))
-    }
-    
-}
-
-private extension Numeric {
+internal extension Numeric {
     
     var negated: Self {
         return 0 - self

@@ -7,6 +7,9 @@ Pods/
 ### SwiftPackageManager ###
 Packages/
 
+### Snapshot ###
+screenshots/
+
 # Created by https://www.gitignore.io/api/macos,xcode
 
 ### macOS ###
