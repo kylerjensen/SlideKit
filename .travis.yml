@@ -11,26 +11,24 @@ matrix:
     - osx_image: xcode9.4
       env: DESTINATION="platform=iOS Simulator,name=iPad Pro (10.5-inch),OS=11.4"
     - osx_image: xcode8.3
-      env: DESTINATION="platform=iOS Simulator,name=iPhone X,OS=10.3"
+      env: DESTINATION="platform=iOS Simulator,name=iPhone SE,OS=10.3.1"
     - osx_image: xcode8.3
-      env: DESTINATION="platform=iOS Simulator,name=iPhone SE,OS=10.3"
+      env: DESTINATION="platform=iOS Simulator,name=iPhone 7,OS=10.3.1"
     - osx_image: xcode8.3
-      env: DESTINATION="platform=iOS Simulator,name=iPhone 8 Plus,OS=10.3"
+      env: DESTINATION="platform=iOS Simulator,name=iPhone 7 Plus,OS=10.3.1"
     - osx_image: xcode8.3
-      env: DESTINATION="platform=iOS Simulator,name=iPad Pro (10.5-inch),OS=10.3"
-
-before_deploy:
-  - npm i -g podspec-bump
-  - git config --local user.name "Travis CI"
-  - git config --local user.eamil "travis@travis-ci.org"
+      env: DESTINATION="platform=iOS Simulator,name=iPad Pro (10.5-inch),OS=10.3.1"
 
 script:
   - set -o pipefail && xcodebuild test -scheme JazzySlideKitUITests -destination "$DESTINATION" | xcpretty
-  - pod lib lint
+
+before_deploy:
+  - npm i -g podspec-bump
+  - podspec-bump -w -i $TRAVIS_TAG
 
 deploy:
   provider: script
-  script: bash scripts/deploy.sh $TRAVIS_TAG JazzySlideKit.podspec
+  script: pod trunk push
   on:
     branch: master
     tags: true
