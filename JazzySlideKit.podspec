@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "#{s.homepage}.git", :tag => s.version }
   s.source_files     = "JazzySlideKit/**/*.{h,m,swift}"
 
-  s.platform         = :ios, "10.0"
+  s.platform         = :ios, "11.0"
   s.swift_version    = "4.2"
 
   s.frameworks       = "UIKit"
