@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D747CDC420ECA30B00BB124C /* SlideFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D747CDC220ECA30B00BB124C /* SlideFlow.storyboard */; };
+		D747CDC620ECA51F00BB124C /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D747CDC520ECA51F00BB124C /* NavigationController.swift */; };
 		D7DC601B20EC0BAF00328B0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC601A20EC0BAF00328B0D /* AppDelegate.swift */; };
-		D7DC601D20EC0BAF00328B0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC601C20EC0BAF00328B0D /* ViewController.swift */; };
 		D7DC602020EC0BAF00328B0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DC601E20EC0BAF00328B0D /* Main.storyboard */; };
 		D7DC602220EC0BB100328B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DC602120EC0BB100328B0D /* Assets.xcassets */; };
 		D7DC602520EC0BB100328B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DC602320EC0BB100328B0D /* LaunchScreen.storyboard */; };
@@ -55,9 +56,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D747CDC320ECA30B00BB124C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SlideFlow.storyboard; sourceTree = "<group>"; };
+		D747CDC520ECA51F00BB124C /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		D7DC601820EC0BAF00328B0D /* JazzySlideKitTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazzySlideKitTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DC601A20EC0BAF00328B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D7DC601C20EC0BAF00328B0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D7DC601F20EC0BAF00328B0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7DC602120EC0BB100328B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7DC602420EC0BB100328B0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,8 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				D7DC604A20EC2E9400328B0D /* JazzySlideKit */,
-				D7DC602F20EC0BCA00328B0D /* JazzySlideKitUITests */,
 				D7DC601920EC0BAF00328B0D /* JazzySlideKitTestApp */,
+				D7DC602F20EC0BCA00328B0D /* JazzySlideKitUITests */,
 				D7DC600920EBF6AC00328B0D /* Products */,
 				D7DC604220EC2C3200328B0D /* Frameworks */,
 			);
@@ -126,8 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				D7DC601A20EC0BAF00328B0D /* AppDelegate.swift */,
-				D7DC601C20EC0BAF00328B0D /* ViewController.swift */,
+				D747CDC520ECA51F00BB124C /* NavigationController.swift */,
 				D7DC601E20EC0BAF00328B0D /* Main.storyboard */,
+				D747CDC220ECA30B00BB124C /* SlideFlow.storyboard */,
 				D7DC602120EC0BB100328B0D /* Assets.xcassets */,
 				D7DC602320EC0BB100328B0D /* LaunchScreen.storyboard */,
 				D7DC602620EC0BB100328B0D /* Info.plist */,
@@ -283,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D747CDC420ECA30B00BB124C /* SlideFlow.storyboard in Resources */,
 				D7DC602520EC0BB100328B0D /* LaunchScreen.storyboard in Resources */,
 				D7DC602220EC0BB100328B0D /* Assets.xcassets in Resources */,
 				D7DC602020EC0BAF00328B0D /* Main.storyboard in Resources */,
@@ -310,7 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7DC601D20EC0BAF00328B0D /* ViewController.swift in Sources */,
+				D747CDC620ECA51F00BB124C /* NavigationController.swift in Sources */,
 				D7DC601B20EC0BAF00328B0D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +355,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D747CDC220ECA30B00BB124C /* SlideFlow.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D747CDC320ECA30B00BB124C /* Base */,
+			);
+			name = SlideFlow.storyboard;
+			sourceTree = "<group>";
+		};
 		D7DC601E20EC0BAF00328B0D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

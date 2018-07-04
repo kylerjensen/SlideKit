@@ -33,6 +33,7 @@ class JazzySlideKitUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
         let app = XCUIApplication()
+        app.buttons["Put 'em up!"].tap()
         app.navigationBars["Page 1"].buttons["Next"].tap()
         app.navigationBars["Page 2"].buttons["Next"].tap()
         app.navigationBars["Page 3"].buttons["Back"].tap()

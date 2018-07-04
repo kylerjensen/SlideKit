@@ -16,7 +16,6 @@ Pod::Spec.new do |s|
 
   s.platform         = :ios, "10.0"
   s.swift_version    = "4.2"
-  s.static_framework = true
 
   s.frameworks       = "UIKit"
 

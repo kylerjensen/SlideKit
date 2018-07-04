@@ -32,7 +32,7 @@ open class JazzySlideNavigationController: UINavigationController {
         }
         set {
             guard let newValue = newValue as? JazzySlideNavigationControllerDelegate else {
-                NSLog("Warning: Looks like you are trying to set a value for JazzySlideNavigationController.delegate to something other than an instance of JazzySlideNavigationControllerDelegate. This is an unsupported operation. No action will be performed.")
+                NSLog("Warning: It looks like you are trying to set a value for JazzySlideNavigationController.delegate to something other than an instance of JazzySlideNavigationControllerDelegate. This is an unsupported operation. No action will be performed.")
                 return
             }
             jazzySlideDelegate = newValue
