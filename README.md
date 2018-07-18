@@ -1,4 +1,5 @@
-# SlideKit [![Build Status](https://travis-ci.com/JazzyComponents/JazzySlideKit.svg)](https://travis-ci.com/Kjens93/SlideKit)
+# SlideKit [![Build Status](https://travis-ci.com/Kjens93/SlideKit.svg?branch=master)](https://travis-ci.com/Kjens93/SlideKit) [![CocoaPods](https://img.shields.io/cocoapods/v/SlideKit.svg)](https://cocoapods.org/pods/SlideKit) [![CocoaPods](https://img.shields.io/cocoapods/p/SlideKit.svg)](https://cocoapods.org/pods/SlideKit) [![CocoaPods](https://img.shields.io/cocoapods/l/SlideKit.svg)](https://cocoapods.org/pods/SlideKit) [![CocoaPods](https://img.shields.io/cocoapods/dt/SlideKit.svg)](https://cocoapods.org/pods/SlideKit)
+
 Soulfully slidey UINavigationController transitions.
 
 Quickly and easily create onboarding flows with a background image or transparent top and bottom bars based on simple UINavigationController semantics.
