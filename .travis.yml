@@ -12,8 +12,8 @@ env:
   - OS="10.3.1" DEVICE="iPad Pro (10.5-inch)"
 
 script:
-  - xcodebuild -list
-  # - xcodebuild test -scheme JazzySlideKitSnapshotTests -destination "platform=iOS Simulator,name=$DEVICE,OS=$OS" | xcpretty -c
+  # - xcodebuild -list
+  - xcodebuild test -scheme SlideKitSnapshotTests -destination "platform=iOS Simulator,name=$DEVICE,OS=$OS" | xcpretty -c
 
 jobs:
   include:
