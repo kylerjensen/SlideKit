@@ -11,13 +11,8 @@ env:
   - OS="10.3.1" DEVICE="iPhone 7 Plus"
   - OS="10.3.1" DEVICE="iPad Pro (10.5-inch)"
 
-before_install:
-  - set -eo pipefail
-
-script: |
-  xcodebuild test \
-  -scheme JazzySlideKitSnapshotTests \
-  -destination "platform=iOS Simulator,name=$DEVICE,OS=$OS" | xcpretty -c
+script:
+  - xcodebuild test -scheme JazzySlideKitSnapshotTests -destination "platform=iOS Simulator,name=$DEVICE,OS=$OS" | xcpretty -c
 
 jobs:
   include:
