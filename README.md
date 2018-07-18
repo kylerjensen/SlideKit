@@ -3,6 +3,8 @@ Soulfully slidey UINavigationController transitions.
 
 Quickly and easily create onboarding flows with a background image or transparent top and bottom bars based on simple UINavigationController semantics.
 
+<img src="https://user-images.githubusercontent.com/15389109/42902178-00605a04-8a8b-11e8-900e-d13efd090e32.gif" width="250px">
+
 # Installation
 
 ## CocoaPods
