@@ -8,11 +8,11 @@ Pod::Spec.new do |s|
   s.description      = "Quickly and easily create onboarding flows with a background image or transparent top and bottom bars based on simple UINavigationController semantics"
   s.author           = "Kyler Jensen"
   s.homepage         = "https://github.com/Kjens93/SlideKit"
-  # s.screenshots      = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
+  s.screenshots      = "https://user-images.githubusercontent.com/15389109/42902178-00605a04-8a8b-11e8-900e-d13efd090e32.gif"
   s.license          = { :type => "Apache License, Version 2.0", :file => "LICENSE" }
   
   s.source           = { :git => "#{s.homepage}.git", :tag => s.version }
-  s.source_files     = "JazzySlideKit/**/*.{h,m,swift}"
+  s.source_files     = "SlideKit/**/*.{h,m,swift}"
 
   s.platform         = :ios, "10.0"
   s.swift_version    = "4.1"
