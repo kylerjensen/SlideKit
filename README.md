@@ -1,4 +1,10 @@
-# SlideKit [![Build Status](https://travis-ci.com/Kjens93/SlideKit.svg?branch=master)](https://travis-ci.com/Kjens93/SlideKit) [![CocoaPods](https://img.shields.io/cocoapods/v/SlideKit.svg)](https://cocoapods.org/pods/SlideKit) [![CocoaPods](https://img.shields.io/cocoapods/p/SlideKit.svg)](https://cocoapods.org/pods/SlideKit) [![CocoaPods](https://img.shields.io/cocoapods/l/SlideKit.svg)](https://cocoapods.org/pods/SlideKit) [![CocoaPods](https://img.shields.io/cocoapods/dt/SlideKit.svg)](https://cocoapods.org/pods/SlideKit)
+# SlideKit 
+[![](https://travis-ci.com/Kjens93/SlideKit.svg?branch=master)](https://travis-ci.com/Kjens93/SlideKit)
+[![](https://img.shields.io/cocoapods/v/SlideKit.svg)](https://cocoapods.org/pods/SlideKit)
+[![](https://img.shields.io/cocoapods/p/SlideKit.svg)](https://cocoapods.org/pods/SlideKit)
+[![](https://img.shields.io/cocoapods/l/SlideKit.svg)](https://cocoapods.org/pods/SlideKit)
+[![](https://img.shields.io/cocoapods/dt/SlideKit.svg)](https://cocoapods.org/pods/SlideKit)
+[![](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Kjens93/SlideKit)
 
 Soulfully slidey UINavigationController transitions.
 

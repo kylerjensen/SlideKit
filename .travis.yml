@@ -7,14 +7,17 @@ env:
   - OS="11.4" DEVICE="iPhone 8"
   - OS="11.4" DEVICE="iPhone 8 Plus"
   - OS="11.4" DEVICE="iPad Pro (10.5-inch)"
-  - OS="10.3.1" DEVICE="iPhone 7"
-  - OS="10.3.1" DEVICE="iPhone 7 Plus"
-  - OS="10.3.1" DEVICE="iPad Pro (10.5-inch)"
+  # The following devices are currently failing because it appears that the travis-ci maintainers have removed those simulators from the list of available simulators
+  # - OS="10.3.1" DEVICE="iPhone 7" 
+  # - OS="10.3.1" DEVICE="iPhone 7 Plus"
+  # - OS="10.3.1" DEVICE="iPad Pro (10.5-inch)"
+
+before_install:
+  - set -e
+  - set -o pipefail
 
 script:
-  # - xcodebuild -list
-  - pod install
-  - xcodebuild test -scheme SlideKitSnapshotTests -destination "platform=iOS Simulator,name=$DEVICE,OS=$OS" | xcpretty -c
+  - xcodebuild test -workspace SlideKit.xcworkspace -scheme SlideKitSnapshotTests -destination "platform=iOS Simulator,name=$DEVICE,OS=$OS" | xcpretty -c
 
 jobs:
   include:
