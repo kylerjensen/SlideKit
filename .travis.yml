@@ -1,8 +1,6 @@
 language: swift
 osx_image: xcode9.4
-cache: 
-  - bundler
-  - cocoapods
+cache: cocoapods
 
 env:
   - OS="11.4" DEVICE="iPhone X"
@@ -19,7 +17,7 @@ before_install:
 script: |
   xcodebuild test \
   -scheme JazzySlideKitSnapshotTests \
-  -destination "platform=iOS Simulator,name=$DEVICE,OS=$OS" | xcpretty -c -f `xcpretty-travis-formatter`
+  -destination "platform=iOS Simulator,name=$DEVICE,OS=$OS" | xcpretty -c
 
 jobs:
   include:
