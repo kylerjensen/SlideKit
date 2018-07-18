@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import GSTouchesShowingWindow_Swift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    private lazy var touchesWindow: GSTouchesShowingWindow = GSTouchesShowingWindow(frame: UIScreen.main.bounds)
 
-    var window: UIWindow?
+    var window: UIWindow? {
+        get { return touchesWindow }
+        set {}
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

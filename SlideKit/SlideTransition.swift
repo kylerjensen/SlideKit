@@ -85,8 +85,6 @@ open class SlideTransition: NSObject, UIViewControllerAnimatedTransitioning {
      */
     open var backgroundColor: UIColor?
     
-    
-    
     open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration + delay
     }

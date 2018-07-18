@@ -1,20 +1,16 @@
 PODS:
-  - iOSSnapshotTestCase (3.0.0):
-    - iOSSnapshotTestCase/SwiftSupport (= 3.0.0)
-  - iOSSnapshotTestCase/Core (3.0.0)
-  - iOSSnapshotTestCase/SwiftSupport (3.0.0):
-    - iOSSnapshotTestCase/Core
+  - GSTouchesShowingWindow-Swift (1.0.3)
 
 DEPENDENCIES:
-  - iOSSnapshotTestCase
+  - GSTouchesShowingWindow-Swift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - iOSSnapshotTestCase
+    - GSTouchesShowingWindow-Swift
 
 SPEC CHECKSUMS:
-  iOSSnapshotTestCase: 23984ffe05289728d646cbb6a7a10b4fb1c93440
+  GSTouchesShowingWindow-Swift: 445376c1c5b105996458498adcfde9019be6fa27
 
-PODFILE CHECKSUM: 7c0384a1a84dfc42687503bfd9b86af8913e9607
+PODFILE CHECKSUM: 3755f11300094272088ad4314c5067b241e16596
 
 COCOAPODS: 1.5.3

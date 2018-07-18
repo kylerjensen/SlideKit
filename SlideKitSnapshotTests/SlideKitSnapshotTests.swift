@@ -2,69 +2,35 @@
 //  SlideKitSnapshotTests.swift
 //  SlideKitSnapshotTests
 //
-//  Created by Kyler Jensen on 7/11/18.
+//  Created by Kyler Jensen on 7/18/18.
 //  Copyright © 2018 Kyler Jensen. All rights reserved.
 //
 
 import XCTest
-import FBSnapshotTestCase
 
-class SlideKitSnapshotTests: FBSnapshotTestCase {
+class SlideKitSnapshotTests: XCTestCase {
         
     override func setUp() {
         super.setUp()
-        recordMode = true
+        
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
+        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-        XCUIDevice().orientation = .portrait
+
+        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
-    func testInitialLayoutIsCorrect() {
-        let app = XCUIApplication()
-        app.buttons["Put 'em up!"].tap()
-        FBSnapshotVerifyView(UIImageView(image: app.screenshot().image))
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
     }
     
-    func testLayoutIsCorrectAfterPush() {
-        let app = XCUIApplication()
-        app.buttons["Put 'em up!"].tap()
-        app.buttons["Next"].tap()
-        FBSnapshotVerifyView(UIImageView(image: app.screenshot().image))
-    }
-    
-    func testLayoutIsCorrectAfterPushAndPop() {
-        let app = XCUIApplication()
-        app.buttons["Put 'em up!"].tap()
-        app.buttons["Next"].tap()
-        app.buttons["Page 1"].tap()
-        FBSnapshotVerifyView(UIImageView(image: app.screenshot().image))
-    }
-    
-    func testLayoutIsCorrectAfterTwoPushes() {
-        let app = XCUIApplication()
-        app.buttons["Put 'em up!"].tap()
-        app.buttons["Next"].tap()
-        app.buttons["Next"].tap()
-        FBSnapshotVerifyView(UIImageView(image: app.screenshot().image))
-    }
-    
-    func testLayoutIsCorrectAfterTwoPushesAndOnePop() {
-        let app = XCUIApplication()
-        app.buttons["Put 'em up!"].tap()
-        app.buttons["Next"].tap()
-        app.buttons["Next"].tap()
-        app.buttons["Page 2"].tap()
-        FBSnapshotVerifyView(UIImageView(image: app.screenshot().image))
-    }
-    
-    func testLayoutIsCorrectAfterTwoPushesAndTwoPops() {
-        let app = XCUIApplication()
-        app.buttons["Put 'em up!"].tap()
-        app.buttons["Next"].tap()
-        app.buttons["Next"].tap()
-        app.buttons["Page 2"].tap()
-        app.buttons["Page 1"].tap()
-        FBSnapshotVerifyView(UIImageView(image: app.screenshot().image))
+    func testExample() {
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
 }
