@@ -1,10 +1,11 @@
 # SlideKit 
 [![](https://travis-ci.com/Kjens93/SlideKit.svg?branch=master)](https://travis-ci.com/Kjens93/SlideKit)
 [![](https://img.shields.io/cocoapods/v/SlideKit.svg)](https://cocoapods.org/pods/SlideKit)
-[![](https://img.shields.io/cocoapods/p/SlideKit.svg)](https://cocoapods.org/pods/SlideKit)
-[![](https://img.shields.io/cocoapods/l/SlideKit.svg)](https://cocoapods.org/pods/SlideKit)
-[![](https://img.shields.io/cocoapods/dt/SlideKit.svg)](https://cocoapods.org/pods/SlideKit)
 [![](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Kjens93/SlideKit)
+[![](https://img.shields.io/cocoapods/l/SlideKit.svg)](https://cocoapods.org/pods/SlideKit)
+[![](https://img.shields.io/cocoapods/p/SlideKit.svg)](https://cocoapods.org/pods/SlideKit)
+[![](https://img.shields.io/cocoapods/dt/SlideKit.svg)](https://cocoapods.org/pods/SlideKit)
+
 
 Soulfully slidey UINavigationController transitions.
 
@@ -17,6 +18,11 @@ Quickly and easily create onboarding flows with a background image or transparen
 ## CocoaPods
 ```ruby
 pod 'SlideKit'
+```
+
+## Carthage
+```ruby
+github "Kjens93/SlideKit"
 ```
 
 # Programmatic Usage
