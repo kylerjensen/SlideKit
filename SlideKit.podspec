@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.author           = "Kyler Jensen"
   s.homepage         = "https://github.com/Kjens93/SlideKit"
   s.screenshots      = "https://user-images.githubusercontent.com/15389109/42902178-00605a04-8a8b-11e8-900e-d13efd090e32.gif"
-  s.license          = { :type => "Apache License, Version 2.0", :file => "LICENSE" }
+  s.license          = { :type => "MIT", :file => "LICENSE" }
   
   s.source           = { :git => "#{s.homepage}.git", :tag => s.version }
   s.source_files     = "SlideKit/**/*.{h,m,swift}"
