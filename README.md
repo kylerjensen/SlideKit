@@ -13,19 +13,50 @@ Quickly and easily create onboarding flows with a background image or transparen
 
 <img src="https://user-images.githubusercontent.com/15389109/42902178-00605a04-8a8b-11e8-900e-d13efd090e32.gif" width="250px">
 
-# Installation
+# Getting Started
+SlideKit comes with several ways, with varying degrees of intrusiveness, to implement sliding push and pop transitions for `UINavigationController`. This section gives instructions for adding the framework to your project, as well as getting started using Interface Builder or just code.
 
-## CocoaPods
+## Adding SlideKit to Your iOS project
+SlideKit can be installed using CocoaPods or Carthage.
+
+### CocoaPods
 ```ruby
 pod 'SlideKit'
 ```
 
-## Carthage
+### Carthage
 ```ruby
 github "Kjens93/SlideKit"
 ```
 
-# Programmatic Usage
+## Using SlideKit
+SlideKit can be used via Interface Builder, code, or a combination of the two.
+
+### Using SlideKit with Interface Builder
+To add slidey transitions to your navigation flow, just change your `UINavigationController` to an instance of `SlideNavigationController`.
+
+<img src="https://user-images.githubusercontent.com/15389109/43020705-2a383d58-8c1e-11e8-8469-85e4a066f25e.gif" height="250px" >
+
+Without writing a single line of code, your navigation flow will begin to move with slidey transitions. You can further customize your transitions in code by interacting with the `navigationController` of any view controller in your navigation flow. For example, you can change a push transition's spring damping ratio by adding the following code to your view controller's `viewWillAppear(animated:)` method:
+
+```swift
+import SlideKit
+
+class ViewController: UIViewController {
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated: animated)
+        let slideNavigationController = self.navigationController as? SlideNavigationController
+        slideNavigationController?.pushTransition.springDampingRatio = 0.75
+    }
+    
+}
+```
+
+As an alternative, you can create a subclass of `SlideNavigationController` and customize it in your subclass' `viewDidLoad()` method.
+
+### Using SlideKit in Code
+
 ```swift
 import SlideKit
 
