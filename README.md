@@ -2,9 +2,9 @@
 [![](https://travis-ci.com/Kjens93/SlideKit.svg?branch=master)](https://travis-ci.com/Kjens93/SlideKit)
 [![](https://api.codacy.com/project/badge/Grade/9a4bcdc62f534a28b7931486d3299e7e)](https://app.codacy.com/app/Kjens93/SlideKit)
 [![](https://img.shields.io/cocoapods/v/SlideKit.svg)](https://cocoapods.org/pods/SlideKit)
-[![](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Kjens93/SlideKit)
 [![](https://img.shields.io/cocoapods/l/SlideKit.svg)](https://cocoapods.org/pods/SlideKit)
 [![](https://img.shields.io/cocoapods/p/SlideKit.svg)](https://cocoapods.org/pods/SlideKit)
+[![](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Kjens93/SlideKit)
 <!-- [![](https://img.shields.io/cocoapods/dt/SlideKit.svg)](https://cocoapods.org/pods/SlideKit) -->
 
 
