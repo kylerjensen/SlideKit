@@ -20,15 +20,23 @@ SlideKit comes with several ways, with varying degrees of intrusiveness, to impl
 ## Adding SlideKit to Your iOS project
 SlideKit can be installed using CocoaPods or Carthage.
 
-### CocoaPods
+<details>
+<summary><strong>CocoaPods</strong></summary>
+
 ```ruby
 pod 'SlideKit'
 ```
 
-### Carthage
+</details>
+
+<details>
+<summary><strong>Carthage</strong></summary>
+
 ```ruby
 github "Kjens93/SlideKit"
 ```
+
+</details>
 
 ## Using SlideKit
 SlideKit can be used via Interface Builder, code, or a combination of the two.
