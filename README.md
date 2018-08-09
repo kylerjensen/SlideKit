@@ -21,7 +21,7 @@ SlideKit comes with several ways, with varying degrees of intrusiveness, to impl
 SlideKit can be installed using CocoaPods or Carthage.
 
 <details>
-<summary><strong>CocoaPods</strong></summary>
+<summary>CocoaPods</summary>
 
 ```ruby
 pod 'SlideKit'
@@ -30,7 +30,7 @@ pod 'SlideKit'
 </details>
 
 <details>
-<summary><strong>Carthage</strong></summary>
+<summary>Carthage</summary>
 
 ```ruby
 github "Kjens93/SlideKit"
