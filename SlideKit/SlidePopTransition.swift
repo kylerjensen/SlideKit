@@ -10,7 +10,6 @@ import UIKit
 
 @objc
 @objcMembers
-@available(iOS 10.0, *)
 open class SlidePopTransition: SlideTransition {
     
     override open func initialTransform(for transitionContext: UIViewControllerContextTransitioning, fromView: UIView, toView: UIView) -> CGAffineTransform {

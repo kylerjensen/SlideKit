@@ -10,13 +10,12 @@ import UIKit
 
 @objc
 @objcMembers
-@available(iOS 10.0, *)
 open class SlideNavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
     
     open var pushTransition: SlideTransition = SlidePushTransition()
     open var popTransition: SlideTransition = SlidePopTransition()
     
-    open func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    open func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         switch operation {
         case .push:
             return pushTransition

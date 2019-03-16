@@ -1,16 +1,16 @@
 PODS:
-  - GSTouchesShowingWindow-Swift (1.0.3)
+  - GSTouchesShowingWindow (1.0.2)
 
 DEPENDENCIES:
-  - GSTouchesShowingWindow-Swift
+  - GSTouchesShowingWindow
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - GSTouchesShowingWindow-Swift
+  https://cdn.jsdelivr.net/cocoa/:
+    - GSTouchesShowingWindow
 
 SPEC CHECKSUMS:
-  GSTouchesShowingWindow-Swift: 445376c1c5b105996458498adcfde9019be6fa27
+  GSTouchesShowingWindow: 65cfb8aaf8989dd871576f05bb804644df2c72c0
 
-PODFILE CHECKSUM: 3755f11300094272088ad4314c5067b241e16596
+PODFILE CHECKSUM: b4764464ebe53f18fd14377b77e719d391bfb388
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.0.beta.2

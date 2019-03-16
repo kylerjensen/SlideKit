@@ -10,7 +10,6 @@ import UIKit
 
 @objc
 @objcMembers
-@available(iOS 10.0, *)
 open class SlideNavigationController: UINavigationController {
     
     private var slideNavigationControllerDelegate = SlideNavigationControllerDelegate()

@@ -10,7 +10,6 @@ import UIKit
 
 @objc
 @objcMembers
-@available(iOS 10.0, *)
 open class SlideTransition: NSObject, UIViewControllerAnimatedTransitioning {
     
     /**
@@ -19,7 +18,7 @@ open class SlideTransition: NSObject, UIViewControllerAnimatedTransitioning {
      
      The default value is [.curveEaseOut].
      */
-    open var animationOptions: UIViewAnimationOptions = [.curveEaseOut]
+    open var animationOptions: UIView.AnimationOptions = [.curveEaseOut]
     
     /**
      The total duration of the animations, measured in seconds.
