@@ -5,12 +5,12 @@ DEPENDENCIES:
   - GSTouchesShowingWindow
 
 SPEC REPOS:
-  https://cdn.jsdelivr.net/cocoa/:
+  https://github.com/cocoapods/specs.git:
     - GSTouchesShowingWindow
 
 SPEC CHECKSUMS:
   GSTouchesShowingWindow: 65cfb8aaf8989dd871576f05bb804644df2c72c0
 
-PODFILE CHECKSUM: b4764464ebe53f18fd14377b77e719d391bfb388
+PODFILE CHECKSUM: 92f9041860177d3c9f744e54d499347f81db9c0b
 
-COCOAPODS: 1.7.0.beta.2
+COCOAPODS: 1.6.1

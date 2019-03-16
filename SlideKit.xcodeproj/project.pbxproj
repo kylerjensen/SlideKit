@@ -393,9 +393,16 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SlideKitTestApp/Pods-SlideKitTestApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SlideKitTestApp/Pods-SlideKitTestApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GSTouchesShowingWindow/GSTouchesShowingWindow.framework",
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SlideKitTestApp/Pods-SlideKitTestApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GSTouchesShowingWindow.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

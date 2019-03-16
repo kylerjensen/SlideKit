@@ -1,22 +1,20 @@
 language: swift
-osx_image: xcode9.4
+osx_image: xcode10.1
 cache: cocoapods
 
 env:
+  - OS="12.1" DEVICE="iPhone XS Max"
+  - OS="12.1" DEVICE="iPad Pro (11-inch)"
   - OS="11.4" DEVICE="iPhone X"
-  - OS="11.4" DEVICE="iPhone 8"
-  - OS="11.4" DEVICE="iPhone 8 Plus"
   - OS="11.4" DEVICE="iPad Pro (10.5-inch)"
-  # The following devices are currently failing because it appears that the travis-ci maintainers have removed those simulators from the list of available simulators
-  # - OS="10.3.1" DEVICE="iPhone 7" 
-  # - OS="10.3.1" DEVICE="iPhone 7 Plus"
-  # - OS="10.3.1" DEVICE="iPad Pro (10.5-inch)"
+  - OS="10.3" DEVICE="iPhone 6" 
+  - OS="10.3" DEVICE="iPad (5th generation)"
 
 before_install:
   - set -e
   - set -o pipefail
-  - gem uninstall cocoapods -x -a
-  - gem install cocoapods --pre
+  - bundle install
+  - bundle exec pod install
 
 script:
   - xcodebuild test -workspace SlideKit.xcworkspace -scheme SlideKitSnapshotTests -destination "platform=iOS Simulator,name=$DEVICE,OS=$OS" | xcpretty -c
@@ -25,8 +23,7 @@ jobs:
   include:
     - stage: deploy
       script:
-        - npm i -g podspec-bump
-        - podspec-bump -w -i $TRAVIS_TAG
-        - pod trunk push 
+        - npx podspec-bump -w -i $TRAVIS_TAG
+        - bundle exec pod trunk push 
       if: tag =~ /[0-9]+(\.[0-9]+)*/
       
