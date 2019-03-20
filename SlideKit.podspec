@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name             = "SlideKit"
-  s.version          = "0.0.1"
+  s.version          = `git describe --tags --abbrev=0`
   s.summary          = "Soulfully slidey UINavigationController transitions"
   s.description      = "Quickly and easily create onboarding flows with a background image or transparent top and bottom bars based on simple UINavigationController semantics"
   s.author           = "Kyler Jensen"
