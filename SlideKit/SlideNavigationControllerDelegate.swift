@@ -21,7 +21,7 @@ open class SlideNavigationControllerDelegate: NSObject, UINavigationControllerDe
             return pushTransition
         case .pop:
             return popTransition
-        case .none:
+        default:
             return nil
         }
     }

@@ -10,8 +10,3 @@ target 'SlideKitTestApp' do
   use_frameworks!
   pod 'GSTouchesShowingWindow'
 end
-
-# target 'SlideKitSnapshotTests' do
-#   use_frameworks!
-#   pod 'iOSSnapshotTestCase'
-# end
